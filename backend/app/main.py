@@ -129,11 +129,11 @@ def seed_data():
         db.add_all(lessons_python)
 
         db.commit()
-        print("✅ Seed data inserted successfully!")
+        print("[OK] Seed data inserted successfully!")
 
     except Exception as e:
         db.rollback()
-        print(f"❌ Seed error: {e}")
+        print(f"[ERROR] Seed error: {e}")
     finally:
         db.close()
 
